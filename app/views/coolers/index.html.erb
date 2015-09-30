@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Coolers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Avatar url</th>
+      <th>Coolnes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coolers.each do |cooler| %>
+      <tr>
+        <td><%= cooler.name %></td>
+        <td><%= cooler.avatar_url %></td>
+        <td><%= cooler.coolnes %></td>
+        <td><%= link_to 'Show', cooler %></td>
+        <td><%= link_to 'Edit', edit_cooler_path(cooler) %></td>
+        <td><%= link_to 'Destroy', cooler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cooler', new_cooler_path %>

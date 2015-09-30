@@ -1,0 +1,29 @@
+<%= form_for(@cooler) do |f| %>
+  <% if @cooler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cooler.errors.count, "error") %> prohibited this cooler from being saved:</h2>
+
+      <ul>
+      <% @cooler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_url %><br>
+    <%= f.text_field :avatar_url %>
+  </div>
+  <div class="field">
+    <%= f.label :coolnes %><br>
+    <%= f.number_field :coolnes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

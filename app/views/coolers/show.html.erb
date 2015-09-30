@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cooler.name %>
+</p>
+
+<p>
+  <strong>Avatar url:</strong>
+  <%= @cooler.avatar_url %>
+</p>
+
+<p>
+  <strong>Coolnes:</strong>
+  <%= @cooler.coolnes %>
+</p>
+
+<%= link_to 'Edit', edit_cooler_path(@cooler) %> |
+<%= link_to 'Back', coolers_path %>
