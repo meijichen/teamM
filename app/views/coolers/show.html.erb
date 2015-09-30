@@ -1,15 +1,15 @@
 
 <div>
-  <img src="<%= @cooler.avatar_url %>" alt="<%=@coolor.name%>" />
-  <h2 style="color:red; font-weight:bold;"><%=@coolor.coolnes%></h2><strong><%= @coolor.name %></strong>
+  <img src="<%= @cooler.avatar_url %>" alt="<%=@cooler.name%>" />
+  <h2 style="color:red; font-weight:bold;"><%=@cooler.coolnes%></h2><strong><%= @cooler.name %></strong>
 </div>
 <div style="background-color: #EEE; width: 70%; margin: 0 auto;">
   <b>Bio:</b><br />
   <p>
-    <%= @coolor.bio %>
+    <%= @cooler.bio %>
   </p>
   <p>
-    Learn more: <%= link_to 'GitHub Profile', @coolor.github_link %><br />
+    Learn more: <%= link_to 'GitHub Profile', @cooler.github_link %><br />
     <%= link_to 'Back to our Team Page!', coolers_path %>
   </p>
 </div>
