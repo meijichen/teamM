@@ -1,22 +1,15 @@
-<p id="notice"><%= notice %></p>
 
-
-
-
-<p>
-  <strong>Name:</strong>
-  <%= @cooler.name %>
-</p>
-
-<p>
-  <strong>Avatar url:</strong>
-  <%= @cooler.avatar_url %>
-</p>
-
-<p>
-  <strong>Coolnes:</strong>
-  <%= @cooler.coolnes %>
-</p>
-
-<%= link_to 'Edit', edit_cooler_path(@cooler) %> |
-<%= link_to 'Back', coolers_path %>
+<div>
+  <img src="<%= @cooler.avatar_url %>" alt="<%=@coolor.name%>" />
+  <h2 style="color:red; font-weight:bold;"><%=@coolor.coolnes%></h2><strong><%= @coolor.name %></strong>
+</div>
+<div style="background-color: #EEE; width: 70%; margin: 0 auto;">
+  <b>Bio:</b><br />
+  <p>
+    <%= @coolor.bio %>
+  </p>
+  <p>
+    Learn more: <%= link_to 'GitHub Profile', @coolor.github_link %><br />
+    <%= link_to 'Back to our Team Page!', coolers_path %>
+  </p>
+</div>
